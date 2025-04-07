@@ -5,29 +5,23 @@
 </head>
 <body>
   <a-scene>
-    <!-- Luces básicas -->
-    <a-light type="ambient" color="#FFFFFF" intensity="0.5"></a-light>
-    <a-light type="directional" color="#C0C0C0" intensity="0.9" position="-1 3 1"></a-light>
+    <!-- Luces (aumenté la intensidad para ver mejor) -->
+    <a-light type="ambient" color="#FFFFFF" intensity="0.8"></a-light>
+    <a-light type="directional" color="#FFFFFF" intensity="1.2" position="-1 3 1"></a-light>
     
-    <!-- Modelo en tamaño miniatura -->
+    <!-- Modelo más pequeño y sin animación -->
     <a-entity 
       obj-model="obj: Escritorio.obj; mtl: Escritorio.mtl" 
-      position="0 0.1 -0.3"     <!-- Posición muy cercana -->
-      scale="0.03 0.03 0.03"    <!-- Escala extremadamente pequeña (3%) -->
-      rotation="0 90 0">        <!-- Vista frontal -->
+      position="0 0.5 -2" 
+      scale="0.25 0.25 0.25">
     </a-entity>
     
-    <!-- Plano base pequeño -->
-    <a-plane position="0 0 -0.5" rotation="-90 0 0" width="2" height="2" color="#C0C0C0"></a-plane>
+    <!-- Plano -->
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" color="#C0C0C0"></a-plane>
     <a-sky color="#767676"></a-sky>
     
-    <!-- Cámara extremadamente cercana -->
-    <a-entity 
-      camera 
-      look-controls 
-      wasd-controls 
-      position="0 0.2 0.4"      <!-- Posición casi pegada al modelo -->
-    </a-entity>
+    <!-- Cámara más cerca -->
+    <a-entity camera look-controls wasd-controls position="0 1.3 2"></a-entity>
   </a-scene>
 </body>
 </html>
